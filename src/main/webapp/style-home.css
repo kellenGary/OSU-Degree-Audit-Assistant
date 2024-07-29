@@ -1,0 +1,185 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+    font-family: BuckeyeSans, Open Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    text-align: center;
+}
+body {
+    background-color: black;
+}
+
+/*MAIN ANIMATION*/
+.block-animation {
+    animation: appear linear 1s backwards;
+    bottom: -100%; /* Start off-screen */
+    opacity: 0; /* Initially invisible */
+    animation-fill-mode: forwards; /* Ensure the final state persists */
+}
+@keyframes appear {
+    0% {
+        transform: translateY(100%); /* Start from off-screen */
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0); /* Move to the final position */
+        opacity: 1; /* Make it visible */
+    }
+}
+
+/*MAIN CONTAINERS*/
+.container {
+    width: 750px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #333;
+    border: 2px solid #333;
+    border-radius: 3px;
+    color: white;
+    height: 100%;
+    margin: 0 auto;
+}
+/*HEADER STYLES*/
+header {
+    margin: 0;
+    padding: 20px;
+}
+.block-o-header {
+    margin: auto;
+    height: 100px;
+    width: 155px; /* Maintain aspect ratio */
+}
+.header-text {
+    animation-name: opac;
+    animation-delay: 1s;
+    animation-duration: 1.5s;
+    animation-fill-mode: backwards;
+}
+@keyframes opac {
+    100% {
+        opacity: 1;
+    }
+    0%  {
+        opacity: 0;
+    }
+}
+
+/*FILE BOX STYLES*/
+#fileInput {
+    display: none;
+}
+.input-size {
+    color: black;
+    height: 40px;
+    width: 621px;
+}
+.link-info-text {
+    padding-bottom: 10px;
+}
+.fileForm {
+    display: inline-block;
+    text-align: center;
+}
+.custom-file-label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #D41143;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.submit-button {
+    display: inline-block;
+    padding: 11.5px 20px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.file-name {
+    text-align: center;
+    color: white;
+}
+
+/*TEXT BOXES AFTER*/
+.text-grid {
+    margin: 0 auto;
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+.direction-text {
+    line-height: 25px;
+}
+
+.about-me {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid ghostwhite;
+    border-spacing: 25px;
+}
+.profile-pic {
+    max-height: 175px;
+    max-width: 175px;
+    border-radius: 100%;
+    margin: auto auto auto 0;
+}
+.profile-text {
+    text-align: left;
+    padding: 20px;
+    background-color: #555;
+    border-radius: 10px;
+    color: white;
+    height: 100%;
+}
+
+.span-rest {
+    grid-column: span 2;
+}
+
+.social-links {
+    display: inline-flex;
+    gap: 25px;
+    margin: 0 125px 0 125px;
+}
+.link-container {
+    width: 750px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+    background-color: #555;
+    border-radius: 10px;
+    color: white;
+    height: 100%;
+}
+.github img {
+    height: 50px;
+    width: 50px;
+    margin: auto;
+}
+.github p {
+    margin: auto;
+    font-size: 13px;
+    grid-column: span 2;
+}
+.outlook img {
+    height: 35px;
+    width: 35px;
+    margin: 5px auto 5px auto;
+}
+.outlook p {
+    margin: auto;
+    font-size: 13px;
+    grid-column: span 2;
+}
+
+

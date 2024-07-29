@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    box-sizing: border-box;
+    font-family: BuckeyeSans, Open Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+body {
+    background-color: black;
+}
+.osu-header {
+    display: grid;
+    grid-template-columns: 2fr;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    margin: 0;
+    padding: 25px;
+}
+.header-text {
+    display: flex;
+    flex-direction: column;
+}
+.block-o {
+    grid-column: 4;
+    height: 100%;
+    width: auto; /* Maintain aspect ratio */
+    max-height: 100px; /* Maximum height to prevent it from growing too large */
+    opacity: 1; /* Initial opacity */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity change */
+}
+.block-o img {
+    width: 100%;
+    height: auto;
+}
+.home-button {
+    width: 100px;
+    grid-column: 3;
+    grid-row: 1;
+    margin: auto;
+    font-size: 15px;
+    text-align: center;
+}
+/* Media query to reduce opacity at different viewport widths */
+@media (max-width: 1250px) {
+    .block-o {
+        opacity: 0.8;
+    }
+}
+@media (max-width: 1000px) {
+    .block-o {
+        opacity: 0.6;
+    }
+}
+@media (max-width: 900px) {
+    .block-o {
+        opacity: 0.4;
+    }
+}
+@media (max-width: 800px) {
+    .block-o {
+        opacity: 0.2;
+    }
+}
+@media (max-width: 750px) {
+    .block-o {
+        opacity: 0.1;
+    }
+}
+@media (max-width: 700px) {
+    .block-o {
+        display: none; /* Hide the entire .block-o container */
+    }
+}
+
+h2 {
+    font-size: 16px;
+}
+h3 {
+    font-size: 13px;
+}
+
+.user-grid {
+    margin: 0 90px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+.in-progress {
+    padding: 0 0 10px 10px;
+    font-size: 13px;
+    word-spacing: 8px;
+}
+
+.req {
+    margin: 0 100px;
+    font-size: 20px;
+}
+
+.sub-grid {
+    margin: 0 90px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 10px;
+}
+
+
+
+.block-animation {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #333;
+    border-radius: 3px;
+    color: white;
+    height: 100%;
+}
+.container-complete {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 10px;
+    background-color: #333;
+    border: 2px solid #333;
+    border-radius: 3px;
+    color: white;
+    height: 100%;
+}
+
+.complete {
+    padding: 10px;
+    font-size: 13px;
+}
+
+.sub-req {
+    padding: 10px;
+    font-size: 15px;
+    word-spacing: 6px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.class-title {
+    padding: 10px;
+    font-size: 13px;
+    word-spacing: 8px;
+    line-height: 25px;
+}
+
+.exceptions-box {
+    margin: 100px;
+}
+
+/* Add this new rule */
+.span-rest {
+    grid-column: span 3;
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.footer {
+    margin-bottom: 250px;
+}
+
+.container-2 {
+    display: grid;
+    padding: 10px;
+    background-color: #333;
+    border: 2px solid #333;
+    border-radius: 3px;
+    color: white;
+    height: 100%;
+}
+
+.user-stats {
+    padding: 10px;
+    font-size: 15px;
+    word-spacing: 6px;
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+
+.credits-box {
+    position: relative;
+    margin: auto;
+    width: 250px;
+    height: 250px;
+}
+.outer {
+    height: 100%; /* Ensure it takes full height of the .outer */
+    width: 100%; /* Ensure it takes full width of the .outer */
+    border-radius: 50%;
+    padding: 20px;
+    box-shadow: 0 0 0 0 rgba(0,0,0,0.15),
+    0 0 8px -1px rgba(255, 255, 255, 0.7);
+}
+.inner {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Ensure it takes full height of the .outer */
+    width: 100%; /* Ensure it takes full width of the .outer */
+    border-radius: 50%;
+    border-color: white;
+    box-shadow:
+            inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+            inset 0 0 4px -1px rgba(255,255,255,0.7),
+            0 0 0 rgba(255,255,255,1),
+            1px 1px 0 rgba(0,0,0,0.15),
+            0 10px 10px -10px rgba(0,0,0,0.05);
+}
+#number {
+    text-align: center;
+    font-size: 25px;
+    color: white;
+}
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
