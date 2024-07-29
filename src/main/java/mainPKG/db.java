@@ -32,25 +32,4 @@ public class db {
 
         return connection;
     }
-
-//
-//    public Connection connectToDB(String dbName, String userName,
-//                                  String password) {
-//        Connection con = null;
-//        try {
-//            Class.forName("org.postgresql.Driver");
-//            con = DriverManager.getConnection(
-//                    "jdbc:postgresql://localhost:5432/" + dbName, userName,
-//                    password);
-//            if (con != null) {
-//                System.out.println("Connection established.");
-//            } else {
-//                System.out.println("Connection failed.");
-//            }
-//        } catch (Exception e) {
-//            System.out.println(e);
-//        }
-//
-//        return con;
-//    }
 }
