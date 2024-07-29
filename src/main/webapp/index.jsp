@@ -59,7 +59,7 @@
                 <div class="github link-container">
                     <img src="Resources/github-logo.png">
                     <p>Github Repository <br>
-                    <a href="https://github.com/kellenGary/OSU-Degree-Audit-Update" target="_blank">Click here</a></p>
+                    <a href="https://github.com/kellenGary/OSU-Degree-Audit-Assistant" target="_blank">Click here</a></p>
                 </div>
                 <div class="outlook link-container">
                     <img src="Resources/outlook-icon.png">
